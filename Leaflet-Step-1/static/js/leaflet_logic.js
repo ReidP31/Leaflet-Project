@@ -1,30 +1,41 @@
 // Store our API endpoint inside queryUrl
 var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
+
+
+
+
 // Perform a GET request to the query URL
 d3.json(queryUrl, function(data) {
   // Once we get a response, send the data.features object to the createFeatures function
   createFeatures(data.features);
 });
 
+
+
+
 function createFeatures(earthquakeData) {
 
   function quakeColor(magnitude) {
 
       switch (true) {
-      case magnitude > 5:
-        "red";
-      case magnitude < 5:
-        "green";
-      
+      case magnitude >= 5:
+        return "#ef3a13";
+      case magnitude > 2 && magnitude < 5:
+        return "#fffb00";
+      case magnitude <= 2:
+        return "#00ff32"
       }
     }
 
   function makeCircles(feature) {
     return {
-      radius: feature.properties.mag * 3,
+      radius: feature.properties.mag ** 2,
+      fill: true,
+      fillcolor: quakeColor(feature.properties.mag),
       color: quakeColor(feature.properties.mag),
-      fillcolor: quakeColor(feature.properties.mag)
+      opacity: .75,
+      fillOpacity: .55
     }
   }
 
@@ -77,7 +88,7 @@ function createMap(earthquakes) {
 
   // Create overlay object to hold our overlay layer
   var overlayMaps = {
-    Earthquakes: earthquakes
+    Earthquakes: earthquakes 
   };
 
   // Create our map, giving it the streetmap and earthquakes layers to display on load
