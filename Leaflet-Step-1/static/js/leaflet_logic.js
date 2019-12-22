@@ -3,8 +3,6 @@ var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_we
 
 
 
-
-
 // Perform a GET request to the query URL
 d3.json(queryUrl, function(data) {
   // Once we get a response, send the data.features object to the createFeatures function
@@ -12,32 +10,38 @@ d3.json(queryUrl, function(data) {
 });
 
 
+function quakeColor(magnitude) {
+
+  switch (true) {
+  case magnitude < 1:
+    return "#B7DF5F";
+  case magnitude < 2:
+    return "#DCED11";
+  case magnitude < 3:
+    return "#EDD911";
+  case magnitude < 4:
+    return "#EDB411";
+  case magnitude < 5:
+    return "#ED7211";
+  default:
+    return "#ED4311";
+  }
+}
+
+function makeCircles(feature) {
+  return {
+    radius: feature.properties.mag ** 2,
+    fillColor: quakeColor(feature.properties.mag),
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: .8
+  }
+}
 
 
 function createFeatures(earthquakeData) {
 
-  function quakeColor(magnitude) {
-
-      switch (true) {
-      case magnitude >= 5:
-        return "#ef3a13";
-      case magnitude > 2 && magnitude < 5:
-        return "#fffb00";
-      case magnitude <= 2:
-        return "#00ff32"
-      }
-    }
-
-  function makeCircles(feature) {
-    return {
-      radius: feature.properties.mag ** 2,
-      fill: true,
-      fillcolor: quakeColor(feature.properties.mag),
-      color: quakeColor(feature.properties.mag),
-      opacity: .75,
-      fillOpacity: .55
-    }
-  }
 
   // Define a function we want to run once for each feature in the features array
   // Give each feature a popup describing the place and time of the earthquake
@@ -52,6 +56,7 @@ function createFeatures(earthquakeData) {
   var earthquakes = L.geoJSON(earthquakeData, {
     onEachFeature: onEachFeature,
     style: makeCircles,
+    
     pointToLayer: function (feature, latlng) {
       return L.circleMarker(latlng);
     }
@@ -60,6 +65,7 @@ function createFeatures(earthquakeData) {
   // Sending our earthquakes layer to the createMap function
   createMap(earthquakes);
 }
+
 
 
 
