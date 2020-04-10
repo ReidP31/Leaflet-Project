@@ -2,6 +2,8 @@
 
 For this Project, I created a Leaflet Map that displays geoJSON data from the US Geological Survey's Earthquake Data API for the last 7 days.
 
+API Link: <a>https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson</a>
+
 ![](Images/USGS%20EQ%20Data%202.17.20.png)
 
 
