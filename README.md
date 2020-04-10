@@ -20,4 +20,7 @@ For this Project, I created a Leaflet Map that displays geoJSON data from the US
 <br/>
 2. Navigate to the directory that contains the index.html file
 <br/>
-3. Run a local web server (you can find instructions <a href='https://mrcoles.com/how-start-local-web-server-view-html-files/'>here<a/>
+3. Run a local web server (you can find some super simple instructions <a href='https://mrcoles.com/how-start-local-web-server-view-html-files/' target='_blank'>here<a/>)
+<br/>
+4. Open a browser tab on your internet browswer and type in the local host address you used to run the local web server
+
