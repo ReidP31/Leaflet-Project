@@ -16,7 +16,7 @@ For this Project, I created a Leaflet Map that displays geoJSON data from the US
 
 ## Instructions for running on your local machine
 
-1. Download or copy and paste the files to a local repository
+1. Download or copy/paste the files to a local repository
 
 2. Navigate to the directory that contains the index.html file
 
