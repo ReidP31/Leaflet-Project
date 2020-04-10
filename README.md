@@ -22,5 +22,5 @@ For this Project, I created a Leaflet Map that displays geoJSON data from the US
 
 3. Run a local web server (you can find some super simple instructions <a href='https://mrcoles.com/how-start-local-web-server-view-html-files/' target="_blank">here</a>)
 
-4. Open a browser tab on your internet browswer and type in the local host address you used to run the local web server
+4. Open a browser tab on your internet browser and type in the local host address you used to run the local web server
 
