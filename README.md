@@ -7,6 +7,9 @@ For this Project, I created a Leaflet Map that displays geoJSON data from the US
 
 <br/>
 
-## Project Details
+## Project Features
 
-* some stuff
+* Fully interactive map with pop-ups for each earthquake
+
+* Earthquakes of a magnitude of 5 or greater are exponentially larger than those that are magnitude less than 5
+
