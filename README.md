@@ -14,7 +14,7 @@ For this Project, I created a Leaflet Map that displays geoJSON data from the US
 * Earthquakes of a magnitude of 5 or greater are exponentially larger than those that are magnitude less than 5
 
 
-## Instructions for Running on your local machine
+## Instructions for running on your local machine
 
 1. Download or copy and paste the files to a local repository
 <br/>
