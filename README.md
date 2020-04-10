@@ -5,3 +5,8 @@ For this Project, I created a Leaflet Map that displays geoJSON data from the US
 ![](Images/USGS%20EQ%20Data%202.17.20.png)
 
 
+<br/>
+
+## Project Details
+
+* some stuff
