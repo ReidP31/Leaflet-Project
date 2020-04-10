@@ -11,7 +11,7 @@ For this Project, I created a Leaflet Map that displays geoJSON data from the US
 
 * Fully interactive map with pop-ups for each earthquake
 
-* Earthquake markers are colored according to a scale, with the smallest earthquakes marked by a light green and the strongest by a dark red
+* Earthquake markers are colored according to a scale, with the smallest earthquakes marked by a light green and the strongest by a dark orange
 
 * Earthquakes of a magnitude of 5 or greater are exponentially larger than those that are magnitude less than 5
 
